@@ -231,7 +231,10 @@ def main(input_str):
         domain = str(domain) + '.com'
         if check_domain_available(domain):
             result.append(domain)
-    print result
+    if result:
+        print 'available domain to register\n', result
+    else:
+        print 'all domains had been registered'
 
 def negex_str():
     negex = r'[0-9a-zA-Z]'
