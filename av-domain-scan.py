@@ -221,10 +221,17 @@ def replace_wildcard(_string, value):
             result[key] = value.next()
     return result
 
-
+def check_domain_available(domain):
+    r = envoy.run('whois %s'%domain)
+    return r.status_code
 
 def main(input_str):
-    print generate_domain(input_str)
+    result = []
+    for domain in generate_domain(input_str):
+        domain = str(domain) + '.com'
+        if check_domain_available(domain):
+            result.append(domain)
+    print result
 
 def negex_str():
     negex = r'[0-9a-zA-Z]'
