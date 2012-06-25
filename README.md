@@ -1,7 +1,7 @@
 domain_scan
 ===========
 
-a scripts to detect available domain using envoy, whois and python
+a scripts to detect available domain for registering by using envoy, whois and python
 
 
 You should have installed envoy and pyparsing,if not,you can install them by using following command:
@@ -29,9 +29,9 @@ Run a command, get the available domain to register
 
 examples:
 
-python av-domain-scan.py ?42
+python av-domain-scan.py ??42.com
 
-note: wildcard '?' represent all string according with regex r'[0-9a-zA-Z]'
+note: wildcard '?' represent all string according with regex expression r'[0-9a-zA-Z]'
 
-if all domains had been registered, script will retusn [], otherwise return domain list.
+if all domains had been registered, script will print nothing, otherwise print available domains.
 
