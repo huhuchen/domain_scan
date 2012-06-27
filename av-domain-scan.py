@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 #coding:utf-8
-
 from invRegex import invert
 import sys, envoy, itertools
 
@@ -45,7 +44,6 @@ def main(input_str):
         domain = domain + '.' + suffix
         if check_domain_available(str(domain)):
             print domain
-
 if __name__ == "__main__":
     input_str = sys.argv[1]
     main(input_str)
