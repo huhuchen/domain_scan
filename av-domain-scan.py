@@ -39,11 +39,12 @@ def check_domain_available(domain):
     return False
 
 def main(input_str):
-    prefix, suffix = input_str.split('.') 
+    prefix, suffix = input_str.split('.')
     for domain in invert(prefix):
         domain = domain + '.' + suffix
         if check_domain_available(str(domain)):
             print domain
+
 if __name__ == "__main__":
     input_str = sys.argv[1]
     main(input_str)
